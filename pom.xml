@@ -135,6 +135,8 @@
     <commons.collections.version>3.2.2</commons.collections.version>
     <commons.cli.version>1.4</commons.cli.version>
     <shiro.version>1.10.0</shiro.version>
+    <pac4j.version>4.5.9-SNAPSHOT</pac4j.version>
+    <buji.version>5.0.1</buji.version>
     <bouncycastle.version>1.70</bouncycastle.version>
     <maven.version>3.6.3</maven.version>
     <dropwizard.version>4.1.14</dropwizard.version>
@@ -375,6 +377,23 @@
         <groupId>org.apache.shiro</groupId>
         <artifactId>shiro-config-core</artifactId>
         <version>${shiro.version}</version>
+      </dependency>
+
+      <!-- OpenId Connect -->
+      <dependency>
+        <groupId>io.buji</groupId>
+        <artifactId>buji-pac4j</artifactId>
+        <version>${buji.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.pac4j</groupId>
+        <artifactId>pac4j-core</artifactId>
+        <version>${pac4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.pac4j</groupId>
+        <artifactId>pac4j-oidc</artifactId>
+        <version>${pac4j.version}</version>
       </dependency>
 
       <dependency>
@@ -2076,4 +2095,12 @@
       </plugin>
     </plugins>
   </reporting>
+
+  <repositories>
+    <repository>
+      <id>functorns-nexus-repo</id>
+      <name>FunctosNS Nexus Repository</name>
+      <url>https://nexus.functorns.com/repository/maven-snapshots/</url>
+    </repository>
+  </repositories>
 </project>
